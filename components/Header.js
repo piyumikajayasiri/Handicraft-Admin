@@ -4,6 +4,7 @@ import Logo from "../public/images/logo-color.png";
 import Image from "next/image";
 const Header = () => {
   const { data: session } = useSession();
+
   if (!session)
     return (
       <>

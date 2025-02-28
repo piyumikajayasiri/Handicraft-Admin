@@ -51,12 +51,12 @@ export default function Navbar() {
             <List />
             Orders
           </Link>
-          <Link className={inactiveLink} href={"/admins"}>
+          <Link className={inactiveLink} href={"/"}>
             <Settings />
             Settings
           </Link>
 
-          <button className={inactiveLink} onClick={logout}>
+          <button className={inactiveLink} onClick={() => logout()}>
             <LogOut /> Log Out
           </button>
         </nav>
