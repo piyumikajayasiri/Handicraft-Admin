@@ -16,6 +16,10 @@ export default function Navbar() {
   const activeLink = "flex gap-1 p-1 bg-white text-blue-900 rounded";
   const router = useRouter();
   const { pathname } = router;
+  async function logout() {
+    router.push("/");
+    await signOut();
+  }
   const { data: session } = useSession();
   if (!session) return;
   return (
@@ -47,12 +51,12 @@ export default function Navbar() {
             <List />
             Orders
           </Link>
-          <Link className={inactiveLink} href={"/"}>
+          <Link className={inactiveLink} href={"/admins"}>
             <Settings />
             Settings
           </Link>
 
-          <button className={inactiveLink} onClick={() => signOut()}>
+          <button className={inactiveLink} onClick={logout}>
             <LogOut /> Log Out
           </button>
         </nav>

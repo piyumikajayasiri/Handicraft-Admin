@@ -4,6 +4,7 @@ import { connectDB } from "@/lib/mongoose";
 export default async function handle(req, res) {
   const { method } = req;
   await connectDB();
+
   if (method === "GET") {
     try {
       if (req.query?.id) {

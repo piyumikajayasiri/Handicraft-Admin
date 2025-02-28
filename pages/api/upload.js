@@ -1,7 +1,9 @@
 import multiparty from "multiparty";
+import { connectDB } from "@/lib/mongoose";
 
 export default async function handle(res, req) {
   const form = multiparty.Form();
+  await connectDB();
 
   const { fields, files } = await new Promise((resolve, reject) => {
     form.parse(req, (err, fields, files) => {
