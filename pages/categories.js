@@ -102,7 +102,7 @@ const CategoriesPage = () => {
           <tr className="border">
             <th className="border p-2">Category Name</th>
             <th className="border p-2">Parent Category</th>
-            <th className="border p-2">Actions</th>
+            <th className="border p-2"></th>
           </tr>
         </thead>
         <tbody>
@@ -113,7 +113,7 @@ const CategoriesPage = () => {
                 <td className="border p-2">
                   {category.parent?.name || "No Parent"}
                 </td>
-                <td className="border p-2 flex gap-2">
+                <td className="border p-2 flex items-center justify-center gap-2">
                   <button
                     onClick={() => editCategory(category)}
                     className="bg-yellow-500 text-white py-1 px-3 rounded"

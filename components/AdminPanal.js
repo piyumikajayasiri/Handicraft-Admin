@@ -45,21 +45,25 @@ export default function AdminPanel() {
   }
 
   return (
-    <div className="p-4 max-w-md mx-auto">
-      <h2 className="text-xl font-bold">Admin Management</h2>
+    <div className="p-4">
+      <h2 className="text-xl font-bold">Admins</h2>
 
       {/* Add Admin Form */}
-      <form onSubmit={addAdmin} className="mt-4 flex space-x-2">
+      <h3 className="mt-4 font-semibold">Add New Admin</h3>
+      <form onSubmit={addAdmin} className="flex flex-row gap-6">
         <input
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="Enter admin email"
+          className="mt-1 p-2 w-full border border-gray-300 rounded"
           required
-          className="p-2 border rounded w-full"
         />
-        <button type="submit" className="bg-blue-600 text-white p-2 rounded">
-          Add Admin
+        <button
+          type="submit"
+          className="bg-[#AC2828] px-6 py-2 rounded-lg text-white font-semibold"
+        >
+          Add New Admin
         </button>
       </form>
 
@@ -68,19 +72,19 @@ export default function AdminPanel() {
       <table className="w-full mt-2 border-collapse border border-gray-300">
         <thead>
           <tr className="bg-gray-200">
-            <th className="p-2 border">Admin Email</th>
-            <th className="p-2 border">Actions</th>
+            <th className="p-2 border flex items-start">Admin Google Email</th>
+            <th className="p-2 border"></th>
           </tr>
         </thead>
-        <tbody>
+        <tbody className="bg-gray-200">
           {admins.length > 0 ? (
             admins.map((admin) => (
-              <tr key={admin._id} className="border">
-                <td className="p-2 border">{admin.email}</td>
-                <td className="p-2 border">
+              <tr key={admin._id} className="">
+                <td className="p-2 ">{admin.email}</td>
+                <td className="p-2 flex items-end justify-end ">
                   <button
                     onClick={() => deleteAdmin(admin.email)}
-                    className="bg-red-500 text-white p-1 rounded"
+                    className="bg-[#D0A7A7] text-black font-semibold px-6 py-2 rounded"
                   >
                     Delete
                   </button>

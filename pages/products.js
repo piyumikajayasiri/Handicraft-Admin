@@ -33,7 +33,7 @@ export default function Products() {
       <table className="w-full m-1 mb-10">
         <thead className="bg-blue-300">
           <tr>
-            <th className=" p-2">Product</th>
+            <th className=" p-2 flex items-start">Product</th>
             <th className=" p-2"></th>
           </tr>
         </thead>
@@ -41,7 +41,7 @@ export default function Products() {
           {products.map((product) => (
             <tr key={product._id}>
               <td className=" p-2">{product.title}</td>
-              <td className=" p-2 flex gap-3">
+              <td className=" p-2 flex items-end justify-end gap-3">
                 <Link
                   className="px-4 py-1 rounded-lg text-black font-semibold bg-[#D0A7A7] inline-flex gap-2"
                   href={`/products/edit/${product._id}`}

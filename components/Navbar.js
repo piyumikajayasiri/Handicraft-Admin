@@ -51,7 +51,7 @@ export default function Navbar() {
             <List />
             Orders
           </Link>
-          <Link className={inactiveLink} href={"/"}>
+          <Link className={inactiveLink} href={"/admins"}>
             <Settings />
             Settings
           </Link>
