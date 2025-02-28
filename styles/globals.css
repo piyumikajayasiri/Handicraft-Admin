@@ -2,20 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+input {
+  @apply border-2 rounded-md px-2 w-full border-gray-300;
+}
+input:focus {
+  @apply border-blue-900;
+}
+h1 {
+  @apply text-blue-900 mb-2 text-xl;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+textarea {
+  @apply border-2 rounded-md px-2 w-full border-gray-300;
+}
+textarea:focus {
+  @apply border-blue-900;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+label {
+  @apply text-blue-900;
+}
+.btn-primary {
+  @apply bg-blue-900 text-white px-4 py-1 rounded-lg;
+}
+table.basic {
+  @apply w-full;
+}
+table.basic tr td {
+  @apply border p-1 border-gray-300;
+}
+table.basic thead tr td {
+  @apply text-blue-900 bg-gray-200;
 }
