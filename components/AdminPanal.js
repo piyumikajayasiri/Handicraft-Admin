@@ -48,7 +48,6 @@ export default function AdminPanel() {
     <div className="p-4">
       <h2 className="text-xl font-bold">Admins</h2>
 
-      {/* Add Admin Form */}
       <h3 className="mt-4 font-semibold">Add New Admin</h3>
       <form onSubmit={addAdmin} className="flex flex-row gap-6">
         <input
